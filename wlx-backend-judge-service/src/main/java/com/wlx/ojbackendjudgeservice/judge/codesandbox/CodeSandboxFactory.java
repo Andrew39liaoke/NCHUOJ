@@ -1,8 +1,8 @@
 package com.wlx.ojbackendjudgeservice.judge.codesandbox;
 
-import com.yupi.yuojbackendjudgeservice.judge.codesandbox.impl.ExampleCodeSandbox;
-import com.yupi.yuojbackendjudgeservice.judge.codesandbox.impl.RemoteCodeSandbox;
-import com.yupi.yuojbackendjudgeservice.judge.codesandbox.impl.ThirdPartyCodeSandbox;
+import com.wlx.ojbackendjudgeservice.judge.codesandbox.impl.ExampleCodeSandbox;
+import com.wlx.ojbackendjudgeservice.judge.codesandbox.impl.RemoteCodeSandbox;
+import com.wlx.ojbackendjudgeservice.judge.codesandbox.impl.ThirdPartyCodeSandbox;
 
 /**
  * 代码沙箱工厂（根据字符串参数创建指定的代码沙箱实例）
