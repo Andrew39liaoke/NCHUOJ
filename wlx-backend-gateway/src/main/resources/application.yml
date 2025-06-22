@@ -17,6 +17,10 @@ spring:
           uri: lb://wlx-backend-judge-service
           predicates:
             - Path=/api/judge/**
+        - id: nchuOJ-backend-exam-service
+          uri: lb://nchuOJ-backend-exam-service
+          predicates:
+            - Path=/api/exam/**
   application:
     name: wlx-backend-gateway
   main:
