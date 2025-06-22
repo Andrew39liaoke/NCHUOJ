@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wlx-backend-service-client" />
+        <module name="wlx-backend-question-service" />
+        <module name="wlx-backend-judge-service" />
+        <module name="wlx-backend-model" />
+        <module name="wlx-backend-gateway" />
+        <module name="wlx-backend-user-service" />
+        <module name="wlx-backend-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

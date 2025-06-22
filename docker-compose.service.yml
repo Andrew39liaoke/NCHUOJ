@@ -1,0 +1,54 @@
+version: '3'
+services:
+  wlx-backend-gateway:
+    container_name: wlx-backend-gateway
+    build:
+      context: ./wlx-backend-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8101:8101"
+    networks:
+      - mynetwork
+
+  wlx-backend-user-service:
+    container_name: wlx-backend-user-service
+    build:
+      context: ./wlx-backend-user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8102:8102"
+    networks:
+      - mynetwork
+    depends_on:
+      - wlx-backend-gateway
+
+  wlx-backend-question-service:
+    container_name: wlx-backend-question-service
+    build:
+      context: ./wlx-backend-question-service
+      dockerfile: Dockerfile
+    ports:
+      - "8103:8103"
+    networks:
+      - mynetwork
+    depends_on:
+      - wlx-backend-user-service
+      - wlx-backend-gateway
+
+  wlx-backend-judge-service:
+    container_name: wlx-backend-judge-service
+    build:
+      context: ./wlx-backend-judge-service
+      dockerfile: Dockerfile
+    ports:
+      - "8104:8104"
+    networks:
+      - mynetwork
+    depends_on:
+      - wlx-backend-user-service
+      - wlx-backend-question-service
+      - wlx-backend-gateway
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:
